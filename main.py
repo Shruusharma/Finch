@@ -49,3 +49,13 @@ async def health():
         "app": settings.app_name,
         "env": settings.app_env
     }
+
+@app.get("/")
+async def root():
+    return {
+  "message": "Finch AI Agent is running",
+  "docs": "/docs",
+  "health": "/health",
+  "chat_endpoint": "/api/v1/chat",
+  "insights": "/api/v1/insights/latest"
+}
