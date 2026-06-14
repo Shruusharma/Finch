@@ -1,4 +1,4 @@
-# Finch — Autonomous Wealth Assistant
+# Finch - Autonomous Wealth Assistant
 
 A production-style multi-agent AI system that autonomously retrieves stock market data, answers portfolio questions using RAG, and generates weekly financial insights.
 
@@ -24,11 +24,11 @@ Built as a portfolio project targeting the Finch AI Agent & Systems Builder inte
 
 ## Key Concepts Demonstrated
 
-- **Multi-agent orchestration** — agents as tools, bounded while-loop for sequential tool calls
-- **RAG (Retrieval-Augmented Generation)** — ChromaDB vector store, semantic retrieval, query reformulation
-- **Tool use / function calling** — LLM decides when and what to call; Python executes
-- **Production patterns** — typed exceptions, input validation, retry/backoff, mocked tests
-- **Autonomous scheduling** — Railway cron triggers `/insights/generate` weekly
+- **Multi-agent orchestration** - agents as tools, bounded while-loop for sequential tool calls
+- **RAG (Retrieval-Augmented Generation)** - ChromaDB vector store, semantic retrieval, query reformulation
+- **Tool use / function calling** - LLM decides when and what to call; Python executes
+- **Production patterns** - typed exceptions, input validation, retry/backoff, mocked tests
+- **Autonomous scheduling** - Railway cron triggers `/insights/generate` weekly
 
 ---
 
@@ -93,4 +93,4 @@ See [`docs/architecture.md`](docs/architecture.md) for documented decisions and 
 
 ## Author
 
-Shruti Sharma — B.Tech CS, 2023–2027
+Shruti Sharma - B.Tech CS, 2023–2027
