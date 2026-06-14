@@ -6,6 +6,8 @@ from config import settings
 from api.routes import chat, insights
 from memory.vector_store import add_portfolio_chunks
 from memory.portfolio_data import SAMPLE_PORTFOLIO, portfolio_to_chunks
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 
 logging.basicConfig(
     level=logging.INFO,
@@ -18,6 +20,8 @@ app = FastAPI(
     version="0.1.0",
     description="Autonomous Wealth Assistant API"
 )
+
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.include_router(chat.router, prefix="/api/v1", tags=["chat"])
 app.include_router(insights.router, prefix="/api/v1", tags=["insights"])
@@ -54,4 +58,4 @@ from fastapi.responses import RedirectResponse
 
 @app.get("/")
 async def root():
-    return RedirectResponse(url="/docs")
+    return FileResponse("static/index.html")

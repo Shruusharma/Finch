@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finch — Autonomous Wealth Assistant</title>
+  <meta name="description" content="AI-powered portfolio analysis, investment insights, and conversational finance. Powered by multi-agent AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <span class="logo-bird">◆</span>
+        <span class="logo-text">Finch</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#chat">Try It</a></li>
+      </ul>
+      <a href="#chat" class="btn btn-primary nav-cta">Start Chatting</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── TICKER ─── -->
+  <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker-track" id="ticker">
+      <span class="tick up">AAPL +1.24%</span>
+      <span class="tick down">TSLA −0.87%</span>
+      <span class="tick up">NVDA +3.12%</span>
+      <span class="tick up">MSFT +0.55%</span>
+      <span class="tick down">AMZN −0.31%</span>
+      <span class="tick up">GOOGL +1.09%</span>
+      <span class="tick down">META −0.44%</span>
+      <span class="tick up">BRK.B +0.78%</span>
+      <span class="tick up">JPM +2.01%</span>
+      <span class="tick down">SPY −0.12%</span>
+      <span class="tick up">QQQ +1.44%</span>
+      <span class="tick up">AAPL +1.24%</span>
+      <span class="tick down">TSLA −0.87%</span>
+      <span class="tick up">NVDA +3.12%</span>
+      <span class="tick up">MSFT +0.55%</span>
+      <span class="tick down">AMZN −0.31%</span>
+      <span class="tick up">GOOGL +1.09%</span>
+      <span class="tick down">META −0.44%</span>
+      <span class="tick up">BRK.B +0.78%</span>
+      <span class="tick up">JPM +2.01%</span>
+    </div>
+  </div>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Multi-Agent AI · Live Market Data
+      </div>
+      <h1 class="hero-headline">
+        Your wealth,<br />
+        <em>reasoned autonomously.</em>
+      </h1>
+      <p class="hero-sub">
+        Finch is a multi-agent AI system that analyzes your portfolio,
+        retrieves real-time market data, and generates investment insights —
+        all through a single conversation.
+      </p>
+      <div class="hero-actions">
+        <a href="#chat" class="btn btn-primary btn-lg">Ask Finch anything</a>
+        <a href="#how-it-works" class="btn btn-ghost btn-lg">See how it works</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Specialist Agents</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">RAG</span>
+          <span class="stat-label">Portfolio Memory</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">Live</span>
+          <span class="stat-label">Market Data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURES ─── -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-label">Capabilities</div>
+      <h2 class="section-title">Everything your wealth needs to think</h2>
+      <p class="section-sub">Three specialist agents work in coordination, each with deep context about their domain.</p>
+
+      <div class="features-grid">
+
+        <div class="feature-card" data-delay="0">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+            </svg>
+          </div>
+          <h3>Live Market Intelligence</h3>
+          <p>Real-time stock prices, historical performance, and company fundamentals — fetched the moment you ask.</p>
+          <div class="feature-tag">yfinance · real-time</div>
+        </div>
+
+        <div class="feature-card" data-delay="80">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3>Portfolio RAG Analysis</h3>
+          <p>Your holdings are semantically indexed. Ask in plain English — Finch retrieves exactly what's relevant.</p>
+          <div class="feature-tag">ChromaDB · vector search</div>
+        </div>
+
+        <div class="feature-card" data-delay="160">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3>Autonomous Weekly Insights</h3>
+          <p>Every Monday, Finch generates a structured investment briefing — unprompted, using its full agent stack.</p>
+          <div class="feature-tag">scheduled · autonomous</div>
+        </div>
+
+        <div class="feature-card" data-delay="240">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Conversational Finance</h3>
+          <p>Ask about index funds, diversification, or your specific allocation. No dashboards. No menus. Just answers.</p>
+          <div class="feature-tag">multi-agent orchestration</div>
+        </div>
+
+        <div class="feature-card" data-delay="320">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Production-Grade Backend</h3>
+          <p>Typed exceptions, retry logic, input validation, and versioned API. Not a demo — a deployed system.</p>
+          <div class="feature-tag">FastAPI · Railway</div>
+        </div>
+
+        <div class="feature-card" data-delay="400">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <h3>Cross-Asset Reasoning</h3>
+          <p>Combine portfolio context with market data in a single question. Finch routes across agents automatically.</p>
+          <div class="feature-tag">multi-tool loop</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── HOW IT WORKS ─── -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-label">Architecture</div>
+      <h2 class="section-title">How Finch thinks</h2>
+      <p class="section-sub">A bounded multi-agent loop routes every question to the right specialist.</p>
+
+      <div class="flow-diagram">
+        <div class="flow-step">
+          <div class="flow-num">1</div>
+          <div class="flow-content">
+            <h4>You ask a question</h4>
+            <p>Any financial question — market data, your portfolio, concepts, or a blend of all three.</p>
+          </div>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step">
+          <div class="flow-num">2</div>
+          <div class="flow-content">
+            <h4>Orchestrator classifies intent</h4>
+            <p>The Orchestrator Agent reads your message and decides which specialist agents to invoke — via tool-calling.</p>
+          </div>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step">
+          <div class="flow-num">3</div>
+          <div class="flow-content">
+            <h4>Specialist agents act</h4>
+            <p>Stock Agent fetches live market data. Portfolio Agent queries ChromaDB for your holdings. Both can run sequentially.</p>
+          </div>
+        </div>
+        <div class="flow-arrow" aria-hidden="true">↓</div>
+        <div class="flow-step">
+          <div class="flow-num">4</div>
+          <div class="flow-content">
+            <h4>LLM synthesizes the answer</h4>
+            <p>Results return to the LLM, which generates a coherent, grounded natural-language response.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="arch-callout">
+        <div class="arch-callout-icon">⚡</div>
+        <p>A complex query like <em>"Should I buy more NVDA given my current position?"</em> triggers up to <strong>6 LLM calls</strong> across the Orchestrator, Portfolio Agent, and Stock Agent — all transparently, in under seconds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CHAT ─── -->
+  <section class="section chat-section" id="chat">
+    <div class="container">
+      <div class="section-label">Live Demo</div>
+      <h2 class="section-title">Ask Finch anything</h2>
+      <p class="section-sub">Connected to the live backend. Real responses from the multi-agent system.</p>
+
+      <div class="chat-layout">
+
+        <!-- Prompt suggestions -->
+        <div class="prompt-sidebar">
+          <p class="prompt-sidebar-label">Try asking:</p>
+          <div class="prompt-chips" id="promptChips">
+            <button class="prompt-chip" data-prompt="Analyze my portfolio">Analyze my portfolio</button>
+            <button class="prompt-chip" data-prompt="What is the current price of NVDA?">Current price of NVDA?</button>
+            <button class="prompt-chip" data-prompt="Explain what diversification means">What is diversification?</button>
+            <button class="prompt-chip" data-prompt="What are index funds and are they a good investment?">What are index funds?</button>
+            <button class="prompt-chip" data-prompt="How is my chip stock performing?">How's my chip stock?</button>
+            <button class="prompt-chip" data-prompt="Should I buy more NVDA given my current position?">Should I buy more NVDA?</button>
+            <button class="prompt-chip" data-prompt="What is the 52-week high for Apple?">AAPL 52-week high?</button>
+            <button class="prompt-chip" data-prompt="Give me a summary of my investment portfolio">Summarize my portfolio</button>
+          </div>
+
+          <div class="insight-panel" id="insightPanel">
+            <div class="insight-panel-header">
+              <span class="insight-dot"></span>
+              Weekly Insight
+            </div>
+            <div class="insight-body" id="insightBody">
+              <button class="btn btn-ghost btn-sm" id="loadInsight">Load latest insight →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat window -->
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-messages" id="chatMessages">
+            <div class="message assistant">
+              <div class="message-avatar">F</div>
+              <div class="message-bubble">
+                <p>Hello. I'm Finch — your autonomous wealth assistant.</p>
+                <p>I can analyze your portfolio, fetch live market data, explain financial concepts, or generate investment insights. What would you like to know?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-typing" id="typingIndicator" style="display:none">
+            <div class="message assistant">
+              <div class="message-avatar">F</div>
+              <div class="message-bubble typing-bubble">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-error" id="chatError" style="display:none">
+            <span id="chatErrorText"></span>
+            <button id="dismissError">✕</button>
+          </div>
+
+          <div class="chat-input-row">
+            <textarea
+              id="chatInput"
+              class="chat-input"
+              placeholder="Ask about your portfolio, market data, or financial concepts…"
+              rows="1"
+              maxlength="2000"
+            ></textarea>
+            <button class="chat-send" id="sendBtn" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+              </svg>
+            </button>
+          </div>
+          <div class="chat-footer-note">Finch uses real market data. Not financial advice.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <span class="logo-bird">◆</span>
+          <span class="logo-text">Finch</span>
+        </a>
+        <p>Autonomous Wealth Assistant.<br />Built with FastAPI, Gemini, ChromaDB.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">Architecture</a>
+          <a href="#chat">Live Chat</a>
+        </div>
+        <div class="footer-col">
+          <h5>API</h5>
+          <a href="/docs" target="_blank">Swagger Docs</a>
+          <a href="/health" target="_blank">Health Check</a>
+          <a href="/api/v1/insights/latest" target="_blank">Latest Insight</a>
+        </div>
+        <div class="footer-col">
+          <h5>Stack</h5>
+          <a href="https://fastapi.tiangolo.com" target="_blank">FastAPI</a>
+          <a href="https://ai.google.dev" target="_blank">Gemini AI</a>
+          <a href="https://www.trychroma.com" target="_blank">ChromaDB</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Built by Shruti Sharma · CS Student · Jaipur</span>
+      <span>Not financial advice. For demonstration purposes.</span>
+    </div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

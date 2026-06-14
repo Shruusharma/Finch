@@ -65,8 +65,9 @@ def call_llm(
 
         tool_result = execute_tool(fn_name, fn_args)
 
-    contents.append(response.candidates[0].content)
-    contents.append(
+        contents.append(response.candidates[0].content)
+        
+        contents.append(
             types.Content(
                 role="user",
                 parts=[
@@ -77,7 +78,6 @@ def call_llm(
                 ],
             )
         )
-
     # Safety net: hit max iterations without a final text answer
     logger.warning(f"Hit MAX_TOOL_ITERATIONS ({MAX_TOOL_ITERATIONS}) without final response")
     return "I gathered some information but wasn't able to fully complete the analysis. Please try rephrasing your question."
