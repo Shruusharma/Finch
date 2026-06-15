@@ -81,7 +81,6 @@ pytest tests/ -v
 Deployed on Railway with:
 - Environment variables set via Railway dashboard (no `.env` in production)
 - `Procfile` defining the production start command
-- Railway cron triggering `POST /insights/generate` every Monday at 9 AM UTC
 
 ---
 
