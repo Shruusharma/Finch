@@ -2,8 +2,6 @@
 
 A production-style multi-agent AI system that autonomously retrieves stock market data, answers portfolio questions using RAG, and generates weekly financial insights.
 
-Built as a portfolio project targeting the Finch AI Agent & Systems Builder internship.
-
 ---
 
 ## Architecture
