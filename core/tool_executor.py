@@ -1,7 +1,7 @@
 import logging
 from tools.market_tools import get_stock_price, get_stock_history, get_company_info
 from tools.portfolio_tools import search_portfolio
-from agents.agent_tools import ask_stock_agent, ask_portfolio_agent
+from agents.agent_tools import ask_stock_agent, ask_portfolio_agent, get_latest_insight_tool
 
 logger = logging.getLogger(__name__)
 
@@ -12,6 +12,7 @@ TOOL_REGISTRY = {
     "search_portfolio": search_portfolio,
     "ask_stock_agent": ask_stock_agent,
     "ask_portfolio_agent": ask_portfolio_agent,
+    "get_latest_insight": get_latest_insight_tool,
 }
 
 

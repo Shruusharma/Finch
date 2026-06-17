@@ -18,6 +18,13 @@ SYSTEM_PROMPT = (
     "If a question is general conversation (greetings, thanks, unrelated topics), "
     "respond directly without calling any tool. "
     "Always give the user a clear, complete answer based on all information gathered."
+    "- get_latest_insight: retrieve the most recently generated weekly portfolio insight report.\n"
+    "If the user asks for:\n"
+    " - latest weekly insight\n"
+    " - latest report\n"
+    " - latest portfolio summary\n"
+    " - weekly investment insight\n"
+    "use get_latest_insight."
 )
 
 

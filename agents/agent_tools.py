@@ -36,3 +36,22 @@ def ask_portfolio_agent(query: str) -> dict:
     logger.info(f"Routing to PortfolioAgent: {query}")
     result = portfolio_agent.handle(query)
     return {"response": result}
+
+
+def get_latest_insight_tool() -> dict:
+    """
+    Retrieves the most recently generated weekly insight report.
+    """
+    from memory.insight_store import get_latest_insight
+
+    insight = get_latest_insight()
+
+    if insight is None:
+        return {
+            "response": "No weekly insight report has been generated yet."
+        }
+
+    return {
+        "generated_at": insight.get("generated_at"),
+        "report": insight.get("report"),
+    }

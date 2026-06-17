@@ -123,9 +123,23 @@ ASK_PORTFOLIO_AGENT_TOOL = {
     }
 }
 
+GET_LATEST_INSIGHT_TOOL = {
+    "name": "get_latest_insight",
+    "description": (
+        "Retrieve the most recently generated weekly portfolio insight report. "
+        "Use when the user asks for the latest insight, latest report, "
+        "weekly investment insight, or portfolio summary."
+    ),
+    "parameters": {
+        "type": "object",
+        "properties": {}
+    }
+}
+
 ORCHESTRATOR_TOOLS = {
     "function_declarations": [
         ASK_STOCK_AGENT_TOOL,
         ASK_PORTFOLIO_AGENT_TOOL,
+        GET_LATEST_INSIGHT_TOOL,
     ]
 }
